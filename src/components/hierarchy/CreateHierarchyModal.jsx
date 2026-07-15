@@ -81,8 +81,9 @@ export default function CreateHierarchyModal() {
   const usedRoomTypeIds = new Set(rows.map((r) => r.roomTypeId).filter(Boolean))
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 px-4">
-      <div className="bg-white w-full max-w-2xl rounded-xl shadow-2xl max-h-[90vh] flex flex-col">
+    <div className="fixed inset-0 z-50">
+      <div className="absolute inset-0 bg-black/40" onClick={closeCreateModal} />
+      <div className="absolute right-0 top-0 h-full w-[40%] bg-white shadow-2xl flex flex-col">
         <div className="px-6 py-5 border-b border-gray-100 flex items-start justify-between">
           <div>
             <h2 className="text-lg font-semibold text-gray-900">
