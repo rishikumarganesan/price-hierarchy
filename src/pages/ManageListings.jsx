@@ -4,9 +4,9 @@ import { useStore } from '../store/useStore'
 import HierarchyTable from '../components/hierarchy/HierarchyTable'
 
 const TABS = [
+  { key: 'hierarchy', label: 'Room Type Hierarchy' },
   { key: 'unmapped', label: 'Unmapped Listings' },
   { key: 'mapped', label: 'Mapped Listings' },
-  { key: 'hierarchy', label: 'Pricing Hierarchy' },
 ]
 
 function InfoBanner() {

@@ -15,8 +15,8 @@ export const roomTypes = [
 ]
 
 export const listings = [
-  { id: 'std-a', roomTypeId: 'standard', name: 'Ocean View Room — Bldg A', tag: 'PARENT', lastUpdatedLabel: '20 mins ago' },
-  { id: 'std-b', roomTypeId: 'standard', name: 'Ocean View Room — Bldg B', tag: 'CHILD', lastUpdatedLabel: '20 mins ago' },
+  { id: 'std-a', roomTypeId: 'standard', name: 'Standard Room — Bldg A', tag: 'PARENT', lastUpdatedLabel: '20 mins ago' },
+  { id: 'std-b', roomTypeId: 'standard', name: 'Standard Room — Bldg B', tag: 'CHILD', lastUpdatedLabel: '20 mins ago' },
   { id: 'dlx-a', roomTypeId: 'deluxe', name: 'Deluxe King — Bldg A', tag: 'PARENT', lastUpdatedLabel: '18 mins ago' },
   { id: 'dlx-b', roomTypeId: 'deluxe', name: 'Deluxe King — Bldg B', tag: 'CHILD', lastUpdatedLabel: '18 mins ago' },
   { id: 'sup-a', roomTypeId: 'superior', name: 'Superior Penthouse', tag: 'PARENT', lastUpdatedLabel: '5 mins ago' },

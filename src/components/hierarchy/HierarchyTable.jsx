@@ -9,7 +9,7 @@ function gapLabel(rung) {
 
 export default function HierarchyTable() {
   const state = useStore()
-  const { hierarchy, rawPricesByRoomType, toggleSyncPrices, openEditModal, deleteHierarchy } = state
+  const { hierarchy, toggleSyncPrices, openEditModal, deleteHierarchy } = state
 
   if (!hierarchy) return null
 
@@ -23,15 +23,10 @@ export default function HierarchyTable() {
             <th className="px-4 py-3 font-medium">Action</th>
             <th className="px-4 py-3 font-medium">Gap Type</th>
             <th className="px-4 py-3 font-medium">Gap Value</th>
-            <th className="px-4 py-3 font-medium">Min Price</th>
-            <th className="px-4 py-3 font-medium">Base Price</th>
-            <th className="px-4 py-3 font-medium">Max Price</th>
           </tr>
         </thead>
         <tbody>
           {hierarchy.rungs.map((rung, i) => {
-            const records = rawPricesByRoomType[rung.roomTypeId]
-            const today = records[0]
             return (
               <tr key={rung.roomTypeId} className="border-b border-gray-100 last:border-0 hover:bg-gray-50/60">
                 <td className="px-4 py-3">
@@ -76,9 +71,6 @@ export default function HierarchyTable() {
                 </td>
                 <td className="px-4 py-3 text-gray-600">{rung.gapType ? (rung.gapType === 'percent' ? '%' : 'Fixed') : '–'}</td>
                 <td className="px-4 py-3 text-gray-600">{gapLabel(rung)}</td>
-                <td className="px-4 py-3 text-gray-600">${today.minPrice}</td>
-                <td className="px-4 py-3 text-gray-600">${today.basePrice.toFixed(0)}</td>
-                <td className="px-4 py-3 text-gray-600">${today.maxPrice}</td>
               </tr>
             )
           })}
